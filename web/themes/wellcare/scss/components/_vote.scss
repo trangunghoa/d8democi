@@ -1,0 +1,46 @@
+.votingapi-widgets {
+
+  &.useful {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+
+    .user-logged-in & {
+      bottom: 60px;
+    }
+
+    .useful-rating {
+      border: 1px solid $gray-light !important;
+      a {
+        background-color: $green-light;
+        color: $gray;
+        margin: 0;
+        text-align: center;
+        width: 40px;
+
+        &:first-child() {
+          border-right: 1px solid $gray-light !important;
+          margin-right: 40px;
+
+          .no-feedback & {
+            margin-right: 0;
+          }
+        }
+
+        &:hover,
+        &.active {
+          background-color: $green-dark;;
+          color: $green-light;
+        }
+      }
+    }
+
+    .form-item {
+      margin-bottom: 0;
+    }
+
+    .vote-result {
+      @include invisible();
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "color": "",
+      "title": "Visit Today",
+      "subTitle": "Total visit: 3,000",
+      "figure": "400",
+      "label": "Yesterday: 800",
+      "percent": "50%"
+    },
+    {
+      "color": "green",
+      "title": "In progress",
+      "subTitle": "Artifacts Under Reviewing",
+      "figure": "50",
+      "label": "Total Artifacts: 500",
+      "percent": "10%"
+    },
+    {
+      "color": "red",
+      "title": "Open Feedbacks",
+      "subTitle": "Feedbacks processed",
+      "figure": "20",
+      "label": "Total Feedbacks: 100",
+      "percent": "20%"
+    },
+    {
+      "color": "yellow",
+      "title": "Helpful",
+      "subTitle": "Agent voted",
+      "figure": "300",
+      "label": "Total Artifacts: 500",
+      "percent": "60%"
+    }
+  ]
+}

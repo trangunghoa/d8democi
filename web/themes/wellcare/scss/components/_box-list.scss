@@ -1,0 +1,25 @@
+.box-list {
+  &__icon {
+    font-size: 2.5rem;
+    color: $green-dark;
+    float: left;
+    margin-right: 10px;
+  }
+
+  &__name {
+    padding-top: 10px;
+  }
+
+  &__description {
+    padding-bottom: 15px;
+    border-bottom:  1px solid $gray-light;
+  }
+
+  .article-list__title {
+    display: none;
+  }
+
+  .article-list {
+    margin-top: 0;
+  }
+}

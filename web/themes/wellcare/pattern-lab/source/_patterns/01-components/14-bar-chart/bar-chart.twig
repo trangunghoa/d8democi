@@ -1,0 +1,24 @@
+<div class="grid-4_md-2_sm-1-noGutter-equalHeight box-shadow">
+  {% for item in items %}
+    <div class="col">
+      <div class="bar-chart {{ item.color }}">
+        <div class="grid-middle">
+          <div class="col-8">
+            <h3 class="bar-chart__title">{{ item.title }}</h3>
+            <span class="bar-chart__sub small">{{ item.subTitle }}</span>
+          </div>
+          <div class="col-4 text--right">
+            <span class="bar-chart__figure">{{ item.figure }}</span>
+          </div>
+        </div>
+        <div class="bar-chart__line">
+          <span class="bar-chart__show" style="width: {{ item.percent }}"></span>
+        </div>
+        <div class="bar-chart__info small">
+          <span class="bar-chart__label">{{ item.label }}</span>
+          <span class="bar-chart__percent">{{ item.percent }}</span>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

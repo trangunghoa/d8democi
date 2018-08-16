@@ -1,0 +1,27 @@
+<div class="section">
+  <div class="container {{ full ? 'full-width' }}">
+    <div class="grid">
+      {% if sidebarLeftItems %}
+        <div class="sidebar col-3_md-12">
+          {% for item in sidebarLeftItems %}
+              {{ item }}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <div class="main col-9_md-12">
+        {% for item in mainItems %}
+            {{ item }}
+        {% endfor %}
+      </div>
+
+      {% if sidebarItems %}
+        <div class="sidebar col-3_md-12">
+          {% for item in sidebarItems %}
+              {{ item }}
+          {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+  </div>
+</div>

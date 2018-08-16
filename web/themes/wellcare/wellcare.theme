@@ -1,0 +1,142 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\user\Entity\User;
+use Drupal\node\Entity\Node;
+use Drupal\image\Entity\ImageStyle;
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function wellcare_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $router = \Drupal::routeMatch();
+  if ($user = $router->getParameter('user')) {
+    if (is_object($user)) {
+      $suggestions[] = 'page__user__profile';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function wellcare_theme_suggestions_block_alter(array &$suggestions, array $vars) {
+  if (!empty($vars['elements']['#id'])) {
+    $block = Block::load($vars['elements']['#id']);
+    $plugin_id = $block->getPlugin()->getPluginId();
+    $ids = explode(':', $plugin_id);
+
+    $new_ss = [];
+    $new_ss[] = 'block__' . $block->getRegion();
+    $new_ss[] = 'block__' . reset($ids) . '__' . $block->getRegion();
+
+    array_splice($suggestions, 2, 0, $new_ss);
+  }
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function wellcare_preprocess_block(&$vars) {
+  if ($vars['base_plugin_id'] == 'system_branding_block') {
+    $vars['site_logo'] = str_replace('logo.svg', 'logo.png', $vars['site_logo']);
+  }
+}
+
+/**
+ * Implements template_preprocess_username().
+ */
+function wellcare_preprocess_username(&$vars) {
+  $vars['attributes']['class'][] = 'icon-user';
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function wellcare_preprocess_page(&$vars) {
+  $vars['page_classes'] = 'page-wrapper';
+
+  $uid = $vars['user']->id();
+  $user = User::load($uid);
+  $avatar = $user->get('user_picture')->entity;
+
+  $handler = \Drupal::service('theme_handler');
+  $path = $handler->getTheme('wellcare')->getPath();
+  $vars['user_picture'] = '/' . $path . '/images/default-avatar.png';
+  $vars['user_position'] = $user->get('field_position')->value;
+
+  if ($avatar) {
+    $avatar_uri = $avatar->uri->value;
+    $image_url = ImageStyle::load('150x150')->buildUrl($avatar_uri);
+    $vars['user_picture'] = $image_url;
+  }
+
+  if (isset($vars['node'])) {
+    $types = ['article', 'audio', 'document', 'video', 'wallet'];
+    $node = $vars['node'];
+
+    if (!is_object($node)) {
+      $node = Node::load($node);
+    }
+
+    if (is_object($node) && in_array($node->getType(), $types)) {
+      $vars['page']['page_title'] = [
+        '#markup' => '<h1>' . $node->type->entity->label() . '</h1>',
+      ];
+    }
+  }
+
+  $router = \Drupal::routeMatch();
+  if ($profile = $router->getParameter('user')) {
+    if (is_object($user)) {
+      $vars['profile'] = $profile;
+      $avatar = $profile->get('user_picture')->entity;
+
+      if ($avatar) {
+        $avatar_uri = $avatar->uri->value;
+        $image_url = ImageStyle::load('150x150')->buildUrl($avatar_uri);
+        $vars['user_picture'] = $image_url;
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_node().
+ */
+function wellcare_preprocess_node(&$vars) {
+  $icons = [
+    'article' => 'icon-file-text',
+    'document' => 'icon-paperclip',
+    'audio' => 'icon-voicemail',
+    'video' => 'icon-video',
+    'forum' => 'icon-bubble',
+  ];
+
+  $node = $vars['node'];
+  $type = $node->getType();
+  $vars['icon'] = isset($icons[$type]) ? $icons[$type] : 'icon-file-text';
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function wellcare_theme_suggestions_user_alter(array &$suggestions, array $vars, $hook) {
+  $suggestions[] = $vars['theme_hook_original'] . '__' . str_replace('-', '_', $vars['elements']['#view_mode']);
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function wellcare_theme_registry_alter(&$theme_registry) {
+  if (isset($theme_registry['page__simplelogin'])) {
+    $path = drupal_get_path('theme', 'wellcare');
+    $theme_registry['page__simplelogin']['path'] = $path . '/templates/layout';
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "icon": "icon-file-text",
+  "name": "Articles",
+  "total": "242",
+  "description": "Fusce quis pulvinar ex, malesuada ornare massa.",
+  "items": {
+    "include()": {
+      "pattern": "components-article-list",
+      "with": {
+        "viewallLink": "#",
+        "title": ""
+      }
+    }
+  }
+}

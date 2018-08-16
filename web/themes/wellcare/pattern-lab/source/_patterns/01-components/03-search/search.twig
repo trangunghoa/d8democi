@@ -1,0 +1,18 @@
+<div class="search-block bg--blue {{ modifier }} text--white">
+  <div class="container">
+    <div class="{{ modifier == 'text--center' ? 'grid-center' : 'grid' }}">
+      <div class="col-8_md-12">
+        <h1 class="search__title">{{ title }}</h1>
+        {% if description %}
+        <p class="search__description">{{ description }}</p>
+        {% endif %}
+        <div class="search__form">
+          <form action="#">
+            <input type="text" class="form-text" placeholder="Type your search terms here"/>
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

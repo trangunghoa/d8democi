@@ -1,0 +1,71 @@
+// STYLES-MAIN.SCSS
+
+// Please centralize all includes here.
+
+// WARNING: DO NOT EDIT /assets/css/styles.css file manually, this should be generated only by compiler based on this file.
+
+
+//Required imports
+@import '../.npm/bower_components/susy/sass/susy';
+
+// Variables
+@import 'base/variables';
+@import 'base/colors';
+
+//Helpers functions
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/animation';
+
+// Reset
+@import 'base/reset';
+
+//Base
+@import 'base/fonts';
+@import 'base/icons';
+@import 'base/grid';
+@import 'base/extends';
+@import 'base/typography';
+@import 'base/btn';
+@import 'base/form';
+@import 'base/table';
+
+// Grid system
+// READ ME here: http://gridlex.devlint.fr/#sass-documentation
+@import 'gridlex/gridlex';
+
+//Helpers classes
+@import 'base/helpers';
+
+// Vendors
+@import 'vendors/sumoselect';
+
+// Components
+@import 'components/search';
+@import 'components/main-points';
+@import 'components/article-list';
+@import 'components/html-block';
+@import 'components/tag';
+@import 'components/breadcrumb';
+@import 'components/box-list';
+@import 'components/content-header';
+@import 'components/forum';
+@import 'components/filter';
+@import 'components/comments';
+@import 'components/pager';
+@import 'components/card';
+@import 'components/vote';
+@import 'components/box-link';
+@import 'components/box-user';
+@import 'components/bar-chart';
+@import 'components/chatbox';
+@import 'components/message';
+
+// Layouts
+@import 'layouts/layout';
+@import 'layouts/navigation';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Pages
+// @import 'pages/index';

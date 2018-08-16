@@ -1,0 +1,7 @@
+{{ trans }}
+  {% if results.vote_field_count|default is empty %}
+    <p>No votes.</p>
+  {% else %}
+    <p>Vote result: {{ results.vote_field_average }}.</p>
+  {% endif %}
+{{ endtrans }}

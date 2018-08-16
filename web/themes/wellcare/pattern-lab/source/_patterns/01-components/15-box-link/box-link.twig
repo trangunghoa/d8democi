@@ -1,0 +1,18 @@
+<div class="box-link box-shadow">
+  <h3 class="box-link__title text--center">
+    {{ title }}
+  </h3>
+
+  <div class="box-link__list">
+    <ul>
+      {% for item in items %}
+        <li>
+          <a href="{{ item.link }}">
+            <span class="{{ item.icon }}"></span>
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

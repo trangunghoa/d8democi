@@ -1,0 +1,16 @@
+.box-user {
+  &__avatar {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    img {
+      border-radius: 50%;
+      max-width: 100%;
+      width: 150px;
+      display: inline-block;
+    }
+  }
+
+  &__name {
+    color: $gray;
+  }
+}

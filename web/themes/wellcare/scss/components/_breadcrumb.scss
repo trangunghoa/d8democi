@@ -1,0 +1,34 @@
+.breadcrumb {
+  &-block {
+    padding: 8px 0;
+    color: $gray;
+
+    a {
+      color: $gray-dark;
+    }
+
+    ul {
+      @include reset-list;
+    }
+
+    li {
+      display: inline-block;
+
+      &:after {
+        content: ">";
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -3px;
+        font-size: 10px;
+        padding: 4px;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.forum {
+  thead,
+  .forum__icon {
+    display: none;
+  }
+
+  tbody {
+    tr {
+      &:first-child() {
+        td.container {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+
+  td {
+    &.container {
+      padding: 25px 0 10px 0;
+      border-top: none;
+
+      .forum__name {
+        font-weight: bold;
+        font-size: 22px;
+
+        &,
+        a {
+          color: $gray-dark;
+        }
+      }
+    }
+
+    &.forum-list__forum {
+      padding-left: 0;
+    }
+
+    .indented {
+      margin-left: 0;
+    }
+  }
+}

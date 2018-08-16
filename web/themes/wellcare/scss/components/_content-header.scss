@@ -1,0 +1,173 @@
+.js-flag-message {
+  @include invisible;
+  display: none !important;
+}
+
+
+// Vote
+.fivestar {
+  display: inline-block;
+  vertical-align: middle;
+
+  .form-item {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .vote-result {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    opacity: .7;
+    margin-top: 10px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+.content {
+  &-header {
+    padding-bottom: $medium-space;
+    border-bottom: 1px solid $gray-light;
+    position: relative;
+
+    h2 {
+      font-size: 2rem;
+      margin-top: $small-space;
+      margin-bottom: 0;
+
+      // For page detail
+      .path-node & {
+        margin-bottom: 15px;
+      }
+
+      // Remove for article detail
+      @include susy-media(desktop) {
+        // margin-right: 300px;
+      }
+
+      a {
+        color: $gray-dark;
+      }
+    }
+
+    img,
+    video {
+      height: auto;
+      width: 100%;
+    }
+
+    a {
+      &[href^="/feedback/"] {
+        @include icon-pseudo();
+        display: inline-block;
+        border: 1px solid $gray-light;
+        background-color: $green-light;
+        color: $gray;
+        margin: 0;
+        text-align: center;
+        width: 42px;
+        font-size: 0;
+        position: absolute;
+        right: 40px;
+        z-index: 5;
+        padding: 3px 0;
+        bottom: 30px;
+        title: "Send feedback";
+
+        .user-logged-in & {
+          bottom: 60px;
+        }
+
+        &:before {
+          font-size: 16px;
+          content: "\e99b";
+          title: "Send feedback";
+        }
+
+        &:hover {
+          background-color: $green-dark;;
+          color: $green-light;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .action-flag,
+    .action-unflag {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      z-index: 2;
+
+      a {
+        @include icon-pseudo();
+        display: inline-block;
+        background-color: $red;
+        width: 122px;
+        text-align: center;
+        color: $white;
+        padding: 3px 7px;
+        font-size: 14px;
+
+        &:hover {
+          text-decoration: none;
+          background-color: rgba($red, .8);
+        }
+
+        &:before {
+          content: "\ea0d";
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .action-flag {
+      a {
+        background-color: $green-dark;
+
+        &:hover {
+          text-decoration: none;
+          background-color: rgba($green-dark, .8);
+        }
+      }
+    }
+
+    .audiofield {
+      position: relative;
+
+      > audio {
+        width: 100%;
+      }
+
+      label {
+        opacity: .8;
+        font-size: 12px;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  &__type {
+    position: relative;
+    top: 15px;
+    font-weight: bold;
+    color: $green-dark;
+  }
+
+  &__meta {
+
+  }
+
+  &__description {
+    margin-top: 15px;
+  }
+
+}
+
+.field--name-field-document-file {
+  padding: 10px;
+  background-color: $green-light;
+}

@@ -1,0 +1,29 @@
+name: Wellcare
+type: theme
+base theme: classy
+description: 'Wellcare theme - A Drupal 8 theme with patternLab style guide.'
+core: 8.x
+
+libraries:
+  - wellcare/global-styling
+  - wellcare/global-scripts
+
+regions:
+  site_branding: 'Site branding'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_title: 'Page title'
+  breadcrumb: Breadcrumb
+  content_top: 'Content top'
+  content: Content
+  content_bottom: 'Content bottom'
+  sidebar: 'Sidebar'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  user_sidebar: 'User sidebar'
+component-libraries:
+  templates:
+    paths:
+      - templates/content

@@ -1,0 +1,144 @@
+{
+  "pageclass" : "home-page",
+  "headerRegion": {
+    "include()": {
+      "pattern": "components-header"
+    }
+  },
+  "footerRegion": {
+    "include()": {
+      "pattern": "components-footer"
+    }
+  },
+  "featureRegion": {
+    "items": [
+      {
+        "include()": {
+          "pattern": "components-search"
+        }
+      },
+      {
+        "include()": {
+          "pattern": "components-main-points"
+        }
+      }
+    ]
+  },
+  "mainRegion": {
+    "class": "",
+    "items": [
+      {
+        "include()": {
+          "pattern": "templates-one-column",
+          "only": true,
+          "with": {
+            "class": "grid-3_md-1",
+            "items": [
+              {
+                "class": "col",
+                "content": {
+                  "include()": {
+                    "pattern": "components-article-list"
+                  }
+                }
+              },
+              {
+                "class": "col",
+                "content": {
+                  "include()": {
+                    "pattern": "components-article-list",
+                    "with": {
+                      "title": "Most Viewed Artifacts"
+                    }
+                  }
+                }
+              },
+              {
+                "class": "col",
+                "content": {
+                  "include()": {
+                    "pattern": "components-html-block",
+                    "only": true,
+                    "with": {
+                      "title": "CEO's Corner",
+                      "content": "<img src='http://www.mylan.com/-/media/images/corporate/shared/webframework/components/globalcarousel/ceo-blog-carousel-image.png'/><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href='#'>Read more</a></p>"
+                    }
+                  }
+                }
+              },
+              {
+                "class": "col",
+                "content": {
+                  "include()": {
+                    "pattern": "components-article-list",
+                    "with": {
+                      "title": "Recommended Artifacts"
+                    }
+                  }
+                }
+              },
+              {
+                "class": "col",
+                "content": {
+                  "include()": {
+                    "pattern": "components-article-list",
+                    "with": {
+                      "title": "Recent discussions"
+                    }
+                  }
+                }
+              },
+              {
+                "class": "col",
+                "content": {
+                  "include()": {
+                    "pattern": "components-html-block",
+                    "only": true,
+                    "with": {
+                      "title": "Tags",
+                      "content": "<img src='https://healthsci.queensu.ca/sites/default/files/styles/header_image/public/2017-07/CHSPR_TagCloud.jpg'/>"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "footerTopRegion": {
+    "items": [
+      {
+        "include()": {
+          "pattern": "components-html-block",
+          "only": true,
+          "with": {
+            "title": "About wellcare KMP",
+            "content": "<p>Fusce quis pulvinar ex, malesuada ornare massa. Maecenas vestibulum justo ut risus dignissim lobortis.</p><p>Fusce quis pulvinar ex, malesuada ornare massa. Maecenas vestibulum justo ut risus dignissim lobortis. Fusce quis pulvinar ex, malesuada ornare massa. Maecenas vestibulum justo ut risus dignissim lobortis.</p>"
+          }
+        }
+      },
+      {
+        "include()": {
+          "pattern": "components-html-block",
+          "only": true,
+          "with": {
+            "title": "Quick Links",
+            "content": "<div class='block-list'><ul><li><a href='#'>This is a quick link</a></li><li><a href='#'>Fusce quis pulvinar ex, malesuada ornare massa</a></li><li><a href='#'>Maecenas vestibulum justo ut risus dignissim lobortis</a></li><li><a href='#'>This is a quick link</a></li><li><a href='#'>Fusce quis pulvinar ex, malesuada ornare massa</a></li><li><a href='#'>Maecenas vestibulum justo ut risus dignissim lobortis</a></li><li><a href='#'>This is a quick link</a></li></ul></div>"
+          }
+        }
+      },
+      {
+        "include()": {
+          "pattern": "components-html-block",
+          "only": true,
+          "with": {
+            "title": "Support",
+            "content": "<img src='https://www.monaxtestandweather.com.au/templates/__custom/Styles/images/supportcenterbigbanner.png'/><h3>Need help? We're here for you.</h3><div class='small'><div>Phone: 123-456-789</div><div>Email: support@wellcarekmp.com</div></div>"
+          }
+        }
+      }
+    ]
+  }
+}

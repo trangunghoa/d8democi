@@ -1,0 +1,7 @@
+{{ trans }}
+  {% if results.vote_field_count|default is empty %}
+    <p>0</p>
+  {% else %}
+    <p>{{ results.vote_field_count }} / {{ results.vote_field_average }}.</p>
+  {% endif %}
+{{ endtrans }}

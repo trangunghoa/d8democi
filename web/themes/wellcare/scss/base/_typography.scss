@@ -1,0 +1,180 @@
+// TYPOGRAPHY
+// Define all typographic styles in this file.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include type-heading;
+  margin-bottom: rem(15px);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: rem(30px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+
+  @include susy-media(tablet) {
+    font-size: rem(40px);
+  }
+}
+
+h2 {
+  font-size: rem(22px);
+  font-weight: 400;
+
+  @include susy-media(tablet) {
+    font-size: rem(26px);
+  }
+}
+
+h3 {
+  font-size: rem(18px);
+
+  @include susy-media(tablet) {
+    font-size: rem(22px);
+  }
+}
+
+h4 {
+  font-size: rem(14px);
+
+  @include susy-media(tablet) {
+    font-size: rem(18px);
+    margin-bottom: 20px;
+  }
+}
+
+h5 {
+  font-size: rem(16px);
+}
+
+h6 {
+  font-size: rem(14px);
+}
+
+// %label,
+// .label {
+//   font-size: rem(14px);
+//   font-weight: bold;
+//   color: $primary-color;
+// }
+
+%small,
+.small {
+  font-size: rem(16px);
+  opacity: .7;
+}
+
+%link,
+.link {
+  color: $blue;
+  text-decoration: none;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &:active,
+  &:hover {
+    color: lighten($blue, 15%);
+    text-decoration: underline;
+  }
+
+  &--white {
+    color: $white;
+
+    &:active,
+    &:hover {
+      color: darken($white, 15%);
+    }
+  }
+}
+
+a {
+  @extend %link;
+}
+
+p {
+  margin-bottom: rem(15px);
+}
+
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+}
+
+small {
+  font-size: smaller;
+}
+
+abbr {
+  border-bottom: 1px dotted $text-color;
+  cursor: help;
+}
+
+tt,
+code,
+kbd,
+samp {
+  font-family: monospace;
+}
+
+ol,
+ul {
+  padding-left: rem(18px);
+  margin-bottom: rem(15px);
+}
+
+label {
+  font-weight: 700;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+blockquote {
+  padding-left: $medium-space;
+  border-left: 10px solid $gray-light;
+  font-size: 1.3rem;
+  margin: $medium-space 0;
+
+  @include susy-media(tablet) {
+    padding-left: $large-space;
+    font-size: 1.6rem;
+  }
+
+  p {
+    display: inline;
+  }
+
+  &:before {
+    content: '\201c';
+  }
+
+  &:after {
+    content: '\201d';
+  }
+}
+
+iframe {
+  max-width: 100%;
+}
+
+figure {
+  line-height: 0;
+}

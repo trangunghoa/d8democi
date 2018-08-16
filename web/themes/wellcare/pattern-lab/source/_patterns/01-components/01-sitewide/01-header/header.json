@@ -1,0 +1,14 @@
+{
+  "logo": "/logo.png",
+  "siteName": "Wellcare",
+  "mainMenu": {
+    "include()": {
+      "pattern": "components-main-menu"
+    }
+  },
+  "userMenu": {
+    "include()": {
+      "pattern": "components-user-menu"
+    }
+  }
+}

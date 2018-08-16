@@ -1,0 +1,31 @@
+<div class="user-menu">
+  <a class="js--toggle-user-menu user-menu__button reset-hover" href="#">
+    <img class="user-menu__avatar" src="{{ user.avatar }}" width="30px" height="30px"/>
+    <!-- <span class="user-menu__icon icon-bell small">0</span> -->
+  </a>
+  <div class="user-menu__dropdown bg--white text--left">
+    <div class="user-menu__banner" style="background-image: url(http://html-templates.multipurposethemes.com/bootstrap-4/admin/superieur-admin/images/user-info.jpg);">
+      <img class="user-menu__avatar" src="{{ user.avatar }}" width="70px" height="70px"/>
+      <div class="user-menu__name">
+        <h5>{{ user.name }}</h5>
+        <span class="small">{{ user.mail }}</span>
+      </div>
+    </div>
+    <div class="user-menu__link">
+      <ul>
+        <li>
+          <a href="{{ link.profile }}"><span class="icon-user"></span>My profile</a>
+        </li>
+        <li>
+          <a href="{{ link.inbox }}"><span class="icon-mail"></span>Inbox (0)</a>
+        </li>
+        <li>
+          <a href="{{ link.acount }}"><span class="icon-settings"></span>Account Setting</a>
+        </li>
+        <li>
+          <a href="#"><span class="icon-log-out"></span>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

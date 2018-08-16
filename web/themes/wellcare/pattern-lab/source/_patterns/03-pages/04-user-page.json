@@ -1,0 +1,202 @@
+{
+  "pageclass" : "user-page bg--grey-light",
+  "headerRegion": {
+    "include()": {
+      "pattern": "components-header"
+    }
+  },
+  "footerRegion": {
+    "include()": {
+      "pattern": "components-footer"
+    }
+  },
+  "mainRegion": {
+    "class": "",
+    "items": [
+      {
+        "include()": {
+          "pattern": "templates-two-columns",
+          "only": true,
+          "with": {
+            "full": true,
+            "mainItems": [
+              {
+                "include()": {
+                  "pattern": "components-card",
+                  "with": {
+                    "title": "Admin Dashboard",
+                    "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-bar-chart"
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-card",
+                  "with": {
+                    "title": "Admin Dashboard",
+                    "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "templates-grids",
+                  "with": {
+                    "gridClass": "grid-2_md-1",
+                    "items": [
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 1",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 2",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "templates-grids",
+                  "with": {
+                    "gridClass": "grid-3_md-1",
+                    "items": [
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 1",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 2",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 3",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "templates-grids",
+                  "with": {
+                    "gridClass": "grid-4_md-1",
+                    "items": [
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 1",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 2",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 3",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "class": "col",
+                        "content": {
+                          "include()": {
+                            "pattern": "components-card",
+                            "with": {
+                              "title": "This is card 4",
+                              "content": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day."
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "sidebarLeftItems": [
+              {
+                "include()": {
+                  "pattern": "components-box-user"
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-box-link"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

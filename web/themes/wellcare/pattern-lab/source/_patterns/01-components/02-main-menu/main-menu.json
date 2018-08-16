@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "title": "Home",
+      "link": "#"
+    },
+    {
+      "title": "Knowledge base",
+      "link": "#"
+    },
+    {
+      "title": "Forums",
+      "link": "#"
+    },
+    {
+      "title": "News",
+      "link": "#"
+    },
+    {
+      "title": "FAQ",
+      "link": "#"
+    }
+  ]
+}

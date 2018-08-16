@@ -1,0 +1,16 @@
+<div class="{{ class }}">
+  {% if mainRegion %}
+    <div class="main-region {{ mainRegion.class }}">
+      {% for item in mainRegion.items %}
+        {{ item }}
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if sidebarRegion %}
+    <div class="sidebar {{ sidebarRegion.class }}">
+      {% for item in sidebarRegion.items %}
+        {{ item }}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

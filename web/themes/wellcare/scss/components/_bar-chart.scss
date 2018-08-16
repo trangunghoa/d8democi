@@ -1,0 +1,61 @@
+.bar-chart {
+  color: $purple;
+  background-color: $white;
+  border: 1px solid $green-light;
+  padding: $small-space 10px;
+
+  &.red {
+    color: $red;
+  }
+
+  &.green {
+    color: $teal;
+  }
+
+  &.yellow {
+    color: $yellow;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: $gray-dark;
+  }
+
+  &__sub {
+    color: $gray;
+  }
+
+  &__figure {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__info {
+    position: relative;
+    color: $gray;
+    font-size: .8em;
+  }
+
+  &__percent {
+    position: absolute;
+    right: 0;
+  }
+
+  &__line {
+    height: 10px;
+    position: relative;
+    background-color: $green-light;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  &__show {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    border-radius: 5px;
+  }
+}

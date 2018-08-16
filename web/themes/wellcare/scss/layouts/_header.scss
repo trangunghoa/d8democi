@@ -1,0 +1,91 @@
+.header {
+  padding: 15px 0;
+
+  @include susy-media(mobileTabletOnly) {
+    padding: 5px 0;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__brand {
+    padding-bottom: 0;
+
+    @include susy-media(mobileTabletOnly) {
+      text-align: center;
+    }
+
+    img {
+      max-width: 150px;
+    }
+  }
+
+  &__nav {
+    padding-bottom: 0;
+
+    @include susy-media(mobileTabletOnly) {
+      display: none;
+      position: absolute;
+      max-width: 600px;
+      left: 0;
+      top: 45px;
+      z-index: 99;
+      background: $white;
+      box-shadow: 1px 1px 5px 0px #ddd;
+      width: 100%;
+
+      .menu-active & {
+        display: block;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 20px;
+    display: inline-block;
+
+    &--close {
+      display: none;
+      .menu-active & {
+        display: inline-block;
+      }
+    }
+
+    &--open {
+      .menu-active & {
+        display: none;
+      }
+    }
+
+    &--left,
+    &--right {
+      position: absolute;
+      top: 10px;
+    }
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+}
+
+.login-button,
+.log-in {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all .3s;
+  top: -5px;
+  position: relative;
+  background-color: rgba($gray,.3);
+
+  &:hover {
+    background-color:  rgba($gray,.5);
+    text-decoration: none !important;
+  }
+}

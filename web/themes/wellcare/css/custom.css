@@ -1,0 +1,14 @@
+html, body {
+  overflow-x: inherit;
+}
+
+.views-field-counter,
+.views-field-node-bulk-form,
+.views-field-operations {
+  min-width: inherit;
+}
+
+.dropbutton-toggle button {
+  min-width: inherit;
+  background-color: #499EAD;
+}

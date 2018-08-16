@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "avatar": "http://panificadoramarcelo.cl/wp-content/uploads/2017/02/default-avatar-plaid-shirt-guy.png",
+      "name": "Vincent Porter",
+      "link": "#",
+      "status": "off",
+      "ideTime": "left 7 mins ago"
+    },
+    {
+      "avatar": "http://panificadoramarcelo.cl/wp-content/uploads/2017/02/default-avatar-plaid-shirt-guy.png",
+      "name": "Aiden Chavez",
+      "link": "#",
+      "status": "on"
+    },
+    {
+      "avatar": "http://panificadoramarcelo.cl/wp-content/uploads/2017/02/default-avatar-plaid-shirt-guy.png",
+      "name": "Hudo",
+      "link": "#",
+      "status": "on"
+    },
+    {
+      "avatar": "http://panificadoramarcelo.cl/wp-content/uploads/2017/02/default-avatar-plaid-shirt-guy.png",
+      "name": "LC",
+      "link": "#",
+      "status": "on"
+    },
+    {
+      "avatar": "http://panificadoramarcelo.cl/wp-content/uploads/2017/02/default-avatar-plaid-shirt-guy.png",
+      "name": "Matt",
+      "link": "#",
+      "status": "on"
+    },
+    {
+      "avatar": "http://panificadoramarcelo.cl/wp-content/uploads/2017/02/default-avatar-plaid-shirt-guy.png",
+      "name": "Feb",
+      "link": "#",
+      "status": "off",
+      "ideTime": "left 20 mins ago"
+    }
+  ]
+}

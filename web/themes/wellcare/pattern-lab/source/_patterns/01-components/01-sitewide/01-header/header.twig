@@ -1,0 +1,26 @@
+<header class="header bg--grey">
+
+  <div class="container">
+    <div class="grid header__inner">
+      <div class="header__brand col-4_md-12">
+        <div class="hidden--desktop header__icon header__icon--left">
+          <a class="js--toggle-main-menu toggle--menu reset-hover" href="#">
+            <span class="header__icon--open icon-menu"></span>
+            <span class="header__icon--close icon-x"></span>
+          </a>
+        </div>
+        <a href="#">
+          <img src="{{ logo }}" alt="{{ siteName}}"/>
+        </a>
+        <div class="header__icon header__icon--right text--right">
+          {{ userMenu }}
+        </div>
+      </div>
+      <div class="header__nav col-7_md-12">
+        <div class="main-menu">
+          {{ mainMenu }}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

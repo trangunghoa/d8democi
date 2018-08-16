@@ -1,0 +1,30 @@
+{
+  "title": "Quick Actions",
+  "items": [
+    {
+      "icon": "icon-book",
+      "link": "#",
+      "title": "Start Study"
+    },
+    {
+      "icon": "icon-upload",
+      "link": "#",
+      "title": "Upload file"
+    },
+    {
+      "icon": "icon-bubble",
+      "link": "#",
+      "title": "Start Discussion"
+    },
+    {
+      "icon": "icon-database",
+      "link": "#",
+      "title": "Request Data"
+    },
+    {
+      "icon": "icon-play",
+      "link": "#",
+      "title": "Run Report"
+    }
+  ]
+}

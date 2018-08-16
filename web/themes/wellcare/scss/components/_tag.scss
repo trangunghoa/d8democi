@@ -1,0 +1,29 @@
+.tag {
+  &-block {
+    margin: $medium-space 0;
+  }
+
+  &__list {
+    @include reset-list;
+    display: inline-block;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-bottom: 3px;
+
+    a {
+      display: inline-block;
+      color: $white;
+      background: $gray;
+      padding: 2px 7px;
+      border-radius: 4px;
+      transition: all .3s;
+
+      &:hover {
+        text-decoration: none;
+        background-color: $gray-dark;
+      }
+    }
+  }
+}

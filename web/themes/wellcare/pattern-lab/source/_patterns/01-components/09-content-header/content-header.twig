@@ -1,0 +1,27 @@
+<div class="content-header">
+  {% if image %}
+    <img src="{{ image }}" alt="{{ title }}"/>
+  {% endif %}
+  {% if type %}
+    <a class="content__type" href="{{ type.link }}">{{ type.name }}</a>
+  {% endif %}
+  <h2>
+    {% if link %}
+      <a href="{{ link }}">{{ title }}</a>
+    {% else %}
+      {{ title }}
+    {% endif %}
+  </h2>
+  <div class="article-list__info small">
+    <span class="icon-calendar">{{ date }}</span>
+    <a class="icon-user" href="{{ author.link }}">{{ author.name }}</a>
+    <a class="icon-folder" href="{{ category.link }}">{{ category.name }}</a>
+    <a class="icon-message-circle" href="{{ commentCount.link }}">{{ commentCount.amount }}</a>
+    <span class="icon-eye">{{ viewCount }}</span>
+  </div>
+  {% if description %}
+    <div class="content__description">
+      {{ description }}
+    </div>
+  {% endif %}
+</div>

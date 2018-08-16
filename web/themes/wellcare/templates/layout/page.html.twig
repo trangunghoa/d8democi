@@ -1,0 +1,142 @@
+<div class="{{ page_classes }}">
+  <header class="header bg--grey">
+    <div class="container">
+      <div class="grid header__inner">
+        <div class="header__brand col-4_md-12">
+          <div class="hidden--desktop header__icon header__icon--left">
+            <a class="js--toggle-main-menu toggle--menu reset-hover" href="#">
+              <span class="header__icon--open icon-menu"></span>
+              <span class="header__icon--close icon-x"></span>
+            </a>
+          </div>
+
+          {{ page.site_branding }}
+
+          <div class="header__icon header__icon--right text--right">
+            <div class="user-menu">
+              {% if logged_in %}
+                {# Will update when work user profile #}
+                {% set image_cover = '//picsum.photos/400/200?image=1000&blur' %}
+
+                <a class="js--toggle-user-menu user-menu__button reset-hover" href="#">
+                  <img class="user-menu__avatar" src="{{ user_picture }}" width="30" height="30" />
+                </a>
+
+                <div class="user-menu__dropdown bg--white text--left">
+                  <div class="user-menu__banner" style="background-image: url({{ image_cover }});">
+                    <img class="user-menu__avatar" src="{{ user_picture }}" width="70" height="70" />
+                    <div class="user-menu__name">
+                      <h5>{{ user.getDisplayName() }}</h5>
+                      <span class="small">{{ user_position }}</span>
+                    </div>
+                  </div>
+
+                  <div class="user-menu__link">
+                    {{ page.secondary_menu }}
+                  </div>
+                </div>
+              {% else %}
+                <a class="login-button" href="{{ path('user.login') }}"><span class="icon-lock"></span> <span class="hidden--mobile">{{ 'Login'|t }}</span></a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="header__nav col-7_md-12">
+          <div class="main-menu">
+            {{ page.primary_menu }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {% if page.page_title %}
+    {% block page_title %}
+      <div class="section page-title bg--blue text--white">
+        <div class="container">
+          {{ page.page_title }}
+        </div>
+      </div>
+    {% endblock %}
+  {% endif %}
+
+  {% if page.content_top %}
+    <div class="section bg--grey">
+      <div class="container">
+        {{ page.content_top }}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.breadcrumb %}
+    {% block breadcrumb %}
+      <div class="breadcrumb-block bg--grey small">
+        <div class="container">
+          {{ page.breadcrumb }}
+        </div>
+      </div>
+    {% endblock %}
+  {% endif %}
+
+  <div id="main" class="main section ">
+    <a id="main-content" tabindex="-1"></a>
+    {% block content %}
+      <div class="section">
+        <div class="container">
+          {% if page.sidebar %}
+            <div class="grid">
+              <div class="main col-9_md-12">
+                {{ page.content }}
+              </div>
+
+              <div class="sidebar col-3_md-12">
+                {{ page.sidebar }}
+              </div>
+            </div>
+          {% else %}
+            {{ page.content }}
+          {% endif %}
+
+          {% if page.content_bottom %}
+            <div class="grid-3_md-1">
+              {{ page.content_bottom }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+
+  {% if page.footer_first or page.footer_second or page.footer_third %}
+    <div class="bg--grey section">
+      <div class="container">
+        <div class="grid-3_md-1">
+          {% if page.footer_first %}
+            <div class="col">
+              {{ page.footer_first }}
+            </div>
+          {% endif %}
+
+          {% if page.footer_second %}
+            <div class="col">
+              {{ page.footer_second }}
+            </div>
+          {% endif %}
+
+          {% if page.footer_third %}
+            <div class="col">
+              {{ page.footer_third }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <footer class="footer bg--blue">
+    <div class="container">
+      &copy; {{ "now"|date("Y") }} Wellcare. {{ 'All Rights Reserved'|t }}.
+    </div>
+  </footer>
+</div>

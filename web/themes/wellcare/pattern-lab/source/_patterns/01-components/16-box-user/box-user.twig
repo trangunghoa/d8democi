@@ -1,0 +1,20 @@
+<div class="box-user box-shadow">
+  <div class="box-user__avatar text--center">
+    <img src="{{ avatar }}">
+  </div>
+  <h3 class="box-user__name text--center">{{ name }}</h3>
+  <div class="box-link">
+    <div class="box-link__list">
+      <ul>
+        {% for item in items %}
+          <li>
+            <a href="{{ item.link }}">
+              <span class="{{ item.icon }}"></span>
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

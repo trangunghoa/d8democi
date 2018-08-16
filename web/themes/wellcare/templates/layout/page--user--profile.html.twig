@@ -1,0 +1,43 @@
+{% set page_classes = 'page-wrapper user-page bg--grey-light' %}
+{% extends "page.html.twig" %}
+
+{% block page_title %}{% endblock %}
+{% block breadcrumb %}{% endblock %}
+
+{% block content %}
+  <div class="section">
+    <div class="container full-width">
+      <div class="grid">
+        <div class="sidebar col-3_md-12">
+          <div class="box-user box-shadow">
+            {% if profile and profile.id() != user.id() %}
+              {# Not view my profile #}
+              <div class="box-user__avatar text--center">
+                <img src="{{ user_picture }}" alt="{{ profile.getDisplayName() }}">
+              </div>
+              <h3 class="box-user__name text--center">{{ profile.getDisplayName() }}</h3>
+            {% else %}
+              <div class="box-user__avatar text--center">
+                <img src="{{ user_picture }}" alt="{{ user.getDisplayName() }}">
+              </div>
+              <h3 class="box-user__name text--center">{{ user.getDisplayName() }}</h3>
+
+              {{ page.user_sidebar }}
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="main col-9_md-12">
+          {{ page.page_title }}
+          {{ page.content }}
+        </div>
+      </div>
+
+      {% if page.content_bottom %}
+        <div class="grid-3_md-1">
+          {{ page.content_bottom }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

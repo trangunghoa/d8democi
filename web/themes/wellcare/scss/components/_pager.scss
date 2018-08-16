@@ -1,0 +1,28 @@
+.pager {
+  margin-top: 15px;
+
+  &__item {
+    padding: 0;
+    display: inline-block;
+    margin-left: -6px;
+
+    &.is-active {
+      a {
+        background-color: $green-light;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 2px 10px;
+      border: 1px solid $gray-light;
+      background-color: $white;
+      transition: all .3s;
+
+      &:hover {
+        background-color: $green-light;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<div class="page-wrapper {{ pageclass }}">
+  {% block header %}
+    {{ headerRegion }}
+  {% endblock %}
+  {% if featureRegion %}
+    {% for item in featureRegion.items %}
+        {{ item }}
+    {% endfor %}
+  {% endif %}
+  <div id="main" class="main section {{ mainRegion.class }}">
+    {% block content %}
+      {% for item in mainRegion.items %}
+        {{ item }}
+      {% endfor %}
+    {% endblock %}
+  </div>
+  {% if footerTopRegion %}
+    <div class="bg--grey section">
+      <div class="container">
+        <div class="grid-3_md-1">
+          {% block footerTop %}
+            {% for item in footerTopRegion.items %}
+              <div class="col">
+                {{ item }}
+              </div>
+            {% endfor %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% block footer %}
+    {{ footerRegion }}
+  {% endblock %}
+</div>

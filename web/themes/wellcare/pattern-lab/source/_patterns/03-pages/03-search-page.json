@@ -1,0 +1,472 @@
+{
+  "pageclass" : "home-page",
+  "headerRegion": {
+    "include()": {
+      "pattern": "components-header"
+    }
+  },
+  "footerRegion": {
+    "include()": {
+      "pattern": "components-footer"
+    }
+  },
+  "featureRegion": {
+    "items": [
+      {
+        "include()": {
+          "pattern": "components-search",
+          "only": true,
+          "with": {
+              "title": "Hey Hudo, how can we help you?",
+              "modifier": "text--left"
+          }
+        }
+      }
+    ]
+  },
+  "mainRegion": {
+    "class": "",
+    "items": [
+      {
+        "include()": {
+          "pattern": "templates-two-columns",
+          "only": true,
+          "with": {
+            "mainItems": [
+              {
+                "include()": {
+                  "pattern": "components-content-header",
+                  "only": true,
+                  "with": {
+                    "title": "The Bussiness Case for Loving Customers",
+                    "link": "#",
+                    "date": "23 July 2014",
+                    "author": {
+                      "name": "Feb Dao",
+                      "link": "#"
+                    },
+                    "category": {
+                      "name": "Support",
+                      "link": "#"
+                    },
+                    "commentCount": {
+                      "amount": "242",
+                      "link": "#"
+                    },
+                    "viewCount": "1000",
+                    "type": {
+                      "link": "#",
+                      "name": "Audios"
+                    },
+                    "description": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-content-header",
+                  "only": true,
+                  "with": {
+                    "title": "The Bussiness Case for Loving Customers",
+                    "link": "#",
+                    "date": "23 July 2014",
+                    "author": {
+                      "name": "Feb Dao",
+                      "link": "#"
+                    },
+                    "category": {
+                      "name": "Support",
+                      "link": "#"
+                    },
+                    "commentCount": {
+                      "amount": "242",
+                      "link": "#"
+                    },
+                    "viewCount": "1000",
+                    "type": {
+                      "link": "#",
+                      "name": "Articles"
+                    },
+                    "description": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-content-header",
+                  "only": true,
+                  "with": {
+                    "title": "The Bussiness Case for Loving Customers",
+                    "link": "#",
+                    "date": "23 July 2014",
+                    "author": {
+                      "name": "Feb Dao",
+                      "link": "#"
+                    },
+                    "category": {
+                      "name": "Support",
+                      "link": "#"
+                    },
+                    "commentCount": {
+                      "amount": "242",
+                      "link": "#"
+                    },
+                    "viewCount": "1000",
+                    "type": {
+                      "link": "#",
+                      "name": "Audios"
+                    },
+                    "description": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-content-header",
+                  "only": true,
+                  "with": {
+                    "title": "The Bussiness Case for Loving Customers",
+                    "link": "#",
+                    "date": "23 July 2014",
+                    "author": {
+                      "name": "Feb Dao",
+                      "link": "#"
+                    },
+                    "category": {
+                      "name": "Support",
+                      "link": "#"
+                    },
+                    "commentCount": {
+                      "amount": "242",
+                      "link": "#"
+                    },
+                    "viewCount": "1000",
+                    "type": {
+                      "link": "#",
+                      "name": "Audios"
+                    },
+                    "description": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-content-header",
+                  "only": true,
+                  "with": {
+                    "title": "The Bussiness Case for Loving Customers",
+                    "link": "#",
+                    "date": "23 July 2014",
+                    "author": {
+                      "name": "Feb Dao",
+                      "link": "#"
+                    },
+                    "category": {
+                      "name": "Support",
+                      "link": "#"
+                    },
+                    "commentCount": {
+                      "amount": "242",
+                      "link": "#"
+                    },
+                    "viewCount": "1000",
+                    "type": {
+                      "link": "#",
+                      "name": "Audios"
+                    },
+                    "description": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-content-header",
+                  "only": true,
+                  "with": {
+                    "title": "The Bussiness Case for Loving Customers",
+                    "link": "#",
+                    "date": "23 July 2014",
+                    "author": {
+                      "name": "Feb Dao",
+                      "link": "#"
+                    },
+                    "category": {
+                      "name": "Support",
+                      "link": "#"
+                    },
+                    "commentCount": {
+                      "amount": "242",
+                      "link": "#"
+                    },
+                    "viewCount": "1000",
+                    "type": {
+                      "link": "#",
+                      "name": "Audios"
+                    },
+                    "description": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-content-header",
+                  "only": true,
+                  "with": {
+                    "title": "The Bussiness Case for Loving Customers",
+                    "link": "#",
+                    "date": "23 July 2014",
+                    "author": {
+                      "name": "Feb Dao",
+                      "link": "#"
+                    },
+                    "category": {
+                      "name": "Support",
+                      "link": "#"
+                    },
+                    "commentCount": {
+                      "amount": "242",
+                      "link": "#"
+                    },
+                    "viewCount": "1000",
+                    "type": {
+                      "link": "#",
+                      "name": "Audios"
+                    },
+                    "description": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes."
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-content-header",
+                  "only": true,
+                  "with": {
+                    "title": "The Bussiness Case for Loving Customers",
+                    "link": "#",
+                    "date": "23 July 2014",
+                    "author": {
+                      "name": "Feb Dao",
+                      "link": "#"
+                    },
+                    "category": {
+                      "name": "Support",
+                      "link": "#"
+                    },
+                    "commentCount": {
+                      "amount": "242",
+                      "link": "#"
+                    },
+                    "viewCount": "1000",
+                    "type": {
+                      "link": "#",
+                      "name": "Audios"
+                    },
+                    "description": "Drupal started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes."
+                  }
+                }
+              }
+            ],
+            "sidebarItems": [
+              {
+                "include()": {
+                  "pattern": "components-article-list",
+                  "only": true,
+                  "with": {
+                    "title": "Recommended Documents",
+                    "items": [
+                      {
+                        "link": "#",
+                        "title": "Preparing your server for installation",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      },
+                      {
+                        "link": "#",
+                        "title": "Can I attach files to forms?",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      },
+                      {
+                        "link": "#",
+                        "title": "How do I contact Customer Care?",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      },
+                      {
+                        "link": "#",
+                        "title": "Why Was my developer application rejected? And this one has multiple lines",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      },
+                      {
+                        "link": "#",
+                        "title": "How to enable labs features?",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "include()": {
+                  "pattern": "components-article-list",
+                  "only": true,
+                  "with": {
+                    "title": "Popular Artifacts",
+                    "items": [
+                      {
+                        "link": "#",
+                        "title": "Preparing your server for installation",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      },
+                      {
+                        "link": "#",
+                        "title": "Can I attach files to forms?",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      },
+                      {
+                        "link": "#",
+                        "title": "How do I contact Customer Care?",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      },
+                      {
+                        "link": "#",
+                        "title": "Why Was my developer application rejected? And this one has multiple lines",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      },
+                      {
+                        "link": "#",
+                        "title": "How to enable labs features?",
+                        "info": {
+                          "commentCount": {
+                            "amount": "223",
+                            "link": "#"
+                          },
+                          "likeCount": {
+                            "amount": "2121",
+                            "link": "#"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "footerTopRegion": {
+    "items": [
+      {
+        "include()": {
+          "pattern": "components-html-block",
+          "only": true,
+          "with": {
+            "title": "About wellcare KMP",
+            "content": "<p>Fusce quis pulvinar ex, malesuada ornare massa. Maecenas vestibulum justo ut risus dignissim lobortis.</p><p>Fusce quis pulvinar ex, malesuada ornare massa. Maecenas vestibulum justo ut risus dignissim lobortis. Fusce quis pulvinar ex, malesuada ornare massa. Maecenas vestibulum justo ut risus dignissim lobortis.</p>"
+          }
+        }
+      },
+      {
+        "include()": {
+          "pattern": "components-html-block",
+          "only": true,
+          "with": {
+            "title": "Quick Links",
+            "content": "<div class='block-list'><ul><li><a href='#'>This is a quick link</a></li><li><a href='#'>Fusce quis pulvinar ex, malesuada ornare massa</a></li><li><a href='#'>Maecenas vestibulum justo ut risus dignissim lobortis</a></li><li><a href='#'>This is a quick link</a></li><li><a href='#'>Fusce quis pulvinar ex, malesuada ornare massa</a></li><li><a href='#'>Maecenas vestibulum justo ut risus dignissim lobortis</a></li><li><a href='#'>This is a quick link</a></li></ul></div>"
+          }
+        }
+      },
+      {
+        "include()": {
+          "pattern": "components-html-block",
+          "only": true,
+          "with": {
+            "title": "Support",
+            "content": "<img src='https://www.monaxtestandweather.com.au/templates/__custom/Styles/images/supportcenterbigbanner.png'/><h3>Need help? We're here for you.</h3><div class='small'><div>Phone: 123-456-789</div><div>Email: support@wellcarekmp.com</div></div>"
+          }
+        }
+      }
+    ]
+  }
+}

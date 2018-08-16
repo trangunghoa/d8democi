@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Artifact detail core template.
+ *
+ */
+#}
+<div class="content-header">
+  {% if content.media is not empty %}
+    {{ content.media }}
+  {% endif %}
+  <h2>{{ label }}</h2>
+  <div class="article-list__info small">
+    <span class="icon-calendar">{{ content.date|format_date('site_date') }}</span>
+    <a href="{{ path('entity.user.canonical', {'user': author.id}) }}" class="icon-user">{{ author.getDisplayName() }}</a>
+    <a class="icon-folder" href="/search?category={{ content.tid }}">{{ content.tname }}</a>
+    <a class="icon-message-circle" href="#comment">{{ content.comment_count }}</a>
+    <span class="icon-eye">{{ content.counter }}</span>
+  </div>
+  {% set can_feedback = 'no-feedback' %}
+  {% if user.hasPermission('send feedback') %}
+    {% set can_feedback = 'has-feedback' %}
+  {% endif %}
+  <div>{{ "Your vote: "|t }}{{ content.vote }}</div>
+  <div class="{{ can_feedback }}">{{ content.helpful }}</div>
+  <div>{{ content.bookmark }}</div>
+  <div>{{ content.sharethis }}</div>
+  {% if user.hasPermission('send feedback') %}
+    <div>{{ content.feedback }}</div>
+  {% endif %}
+</div>
+<div>{{ content.moderation }}</div>
+
+{% if content.file is not empty %}
+  {{ content.file }}
+{% endif %}
+<div class="block-html">
+  {% if content.body %}
+    <div class="block__content">{{ content.body }}</div>
+  {% endif %}
+</div>
+<div class="tag-block">
+  <span class="tag__label">{{ "Tagged"|t }}:</span>
+  <ul class="tag__list">
+    {% for item in content.tags %}
+      <li class="tag__item"><a href="/search?tags[]={{ item.entity.tid.value }}">{{ item.entity.name.value }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% if content.version %}
+  <div>{{ content.version }}</div>
+{% endif %}
+<div id="comment">{{ content.comment }}</div>

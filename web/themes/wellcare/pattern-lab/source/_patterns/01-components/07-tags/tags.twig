@@ -1,0 +1,10 @@
+<div class="tag-block">
+  <span class="tag__label">{{ title }}:</span>
+  <ul class="tag__list">
+    {% for item in items %}
+      <li class="tag__item">
+        <a href="{{ item.link }}">#{{ item.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

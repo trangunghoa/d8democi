@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "icon": "icon-bulb",
+      "link": "#",
+      "title": "Knowledge Base",
+      "text": "33 Articles/ 33 Documents/ 20 Videos/ 40 Audios/ 10 Categories"
+    },
+    {
+      "icon": "icon-bubble",
+      "link": "#",
+      "title": "Forums",
+      "text": "16 Topics/ 12 Posts"
+    },
+    {
+      "icon": "icon-megaphone",
+      "link": "#",
+      "title": "News",
+      "text": "11 Posts/ 3 Categories"
+    }
+  ]
+}

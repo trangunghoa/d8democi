@@ -1,0 +1,23 @@
+{
+  "brandColors": {
+    "items": [
+      {
+        "include()": {
+          "pattern": "base-elements-colors",
+          "with": {
+            "colors": [
+              {
+                "variable": "$primary-color",
+                "code": "#112146"
+              },
+              {
+                "variable": "$text-color",
+                "code": "#000000"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

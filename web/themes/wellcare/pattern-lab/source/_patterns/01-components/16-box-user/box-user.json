@@ -1,0 +1,36 @@
+{
+  "avatar": "http://panificadoramarcelo.cl/wp-content/uploads/2017/02/default-avatar-plaid-shirt-guy.png",
+  "name": "Feb Dao",
+  "items": [
+    {
+      "icon": "icon-server",
+      "link": "#",
+      "title": "Dashboard"
+    },
+    {
+      "icon": "icon-database",
+      "link": "#",
+      "title": "Data"
+    },
+    {
+      "icon": "icon-bubble",
+      "link": "#",
+      "title": "Messaging"
+    },
+    {
+      "icon": "icon-trending-up",
+      "link": "#",
+      "title": "Trends"
+    },
+    {
+      "icon": "icon-file-text",
+      "link": "#",
+      "title": "Files/Documents"
+    },
+    {
+      "icon": "icon-folder",
+      "link": "#",
+      "title": "Education Material"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{% set author = node.uid.entity %}
+
+{{ content.field_image.0 }}
+
+<h2>
+  <a href="{{ url }}" rel="bookmark">
+    {{ label.0 }}
+  </a>
+</h2>
+
+<div class="article-list__info">
+  <span class="icon-calendar">{{ node.getCreatedTime()|format_date('site_date') }}</span>
+  <a href="{{ path('entity.user.canonical', {'user': author.id}) }}" class="icon-user">{{ author.getDisplayName() }}</a>
+  <span class="icon-eye">{{ total_viewed }}</span>
+</div>
+
+{{ content.body.0 }}

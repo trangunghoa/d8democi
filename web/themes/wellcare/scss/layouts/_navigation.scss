@@ -1,0 +1,145 @@
+// Navigation.
+.nav {
+  ul {
+    margin-bottom: rem(10px);
+  }
+}
+
+.main-menu {
+  @include susy-media(desktop) {
+    text-align: right;
+  }
+
+  ul {
+    @include reset-list;
+  }
+
+  li {
+    @include susy-media(desktop) {
+      display: inline-block;
+      margin-left: -2px;
+    }
+  }
+
+  a {
+    display: block;
+    color: $gray-dark;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    line-height: 35px;
+    transition: all .3s;
+
+    @include susy-media(desktop) {
+      font-size: 14px;
+      display: inline-block;
+      padding: 5px 15px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.user-menu {
+  position: relative;
+
+  &__button {
+    position: relative;
+    display: block;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -5px;
+    left: 100%;
+    display: inline-block;
+    background-color: $white;
+  }
+
+  &__dropdown {
+    width: 250px;
+    box-shadow: 1px 1px 5px 0px #ddd;
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    max-height:0;
+    overflow:hidden;
+    transform:perspective(400) rotate3d(1,0,0,-90deg);
+    transform-origin:50% 0;
+    transition:350ms;
+
+    &.active {
+      max-height:1000px;
+      transform:perspective(400) rotate3d(0,0,0,0);
+    }
+
+    h5 {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    padding: 10px;
+
+    span {
+      padding-right: 5px;
+    }
+
+    li {
+      &:last-child() {
+        margin-top: 5px;
+        padding-top: 5px;
+        border-top: 1px solid $gray-light;
+      }
+    }
+  }
+  &__banner {
+    @include clearfix;
+    padding: 10px;
+    color: $white;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+  }
+
+  &__name {
+    margin-left: 75px;
+    word-break: break-all;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    max-width: 50px !important;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  ul {
+    @include reset-list;
+  }
+
+  a {
+    color: $gray-dark;
+    font-size: 12px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    display: inline-block;
+  }
+}

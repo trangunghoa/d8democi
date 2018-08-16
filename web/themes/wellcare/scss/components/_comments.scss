@@ -1,0 +1,30 @@
+.comment {
+  padding-bottom: $medium-space;
+  padding-top: $small-space;
+  border-top: 1px solid $gray-light;
+
+  &-wrapper {
+    border-top: 1px solid $gray-light;
+    padding-top: $medium-space;
+    padding-bottom:  $medium-space;
+
+    > h2 {
+      margin-bottom: $medium-space;
+    }
+  }
+
+  &__meta {
+  position: relative;
+
+    > a {
+      @include icon-pseudo();
+      position: absolute;
+      right: 0;
+
+      &:before {
+        content: "\e991";
+        margin-right: 5px;
+      }
+    }
+  }
+}

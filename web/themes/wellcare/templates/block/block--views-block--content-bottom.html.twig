@@ -1,0 +1,11 @@
+<div class="col">
+  <div class="article-list">
+    {% if label %}
+      <h2 class="article-list__title">{{ label }}</h2>
+    {% endif %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</div>

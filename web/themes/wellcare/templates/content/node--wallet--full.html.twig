@@ -1,0 +1,25 @@
+<div class="content-header">
+  <h2>{{ label }}</h2>
+  <div class="article-list__info small">
+    <span class="icon-calendar">
+      {{ node.getCreatedTime()|format_date('site_date') }}
+    </span>
+    <a href="{{ path('entity.user.canonical', {'user': node.uid.entity.id}) }}" class="icon-user">
+      {{ node.uid.entity.getDisplayName() }}
+    </a>
+    <span class="icon-eye">
+      {{ content.comment['#items'].comment_count }}
+    </span>
+  </div>
+  {{ content.sharethis }}
+</div>
+
+<div class="block-html">
+  {% if content.body %}
+    <div class="block__content">
+      {{ content.body }}
+    </div>
+  {% endif %}
+
+  {{ content.field_contents_ref }}
+</div>

@@ -1,0 +1,43 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+
+{% set author = node.uid.entity %}
+
+<article{{ attributes.addClass(classes) }}>
+  {% block header %}
+    {%
+      include '@templates/_artifact-detail.html.twig'
+        with {
+          "content": {
+            "feedback": feedback_link,
+            "media": content.field_video_file[0],
+            "label": label,
+            "date": node.getCreatedTime(),
+            "author": author,
+            "tid": node.field_category.entity.tid.value,
+            "tname": node.field_category.entity.name.value,
+            "bookmark": content.flag_bookmark,
+            "vote": content.field_review[0],
+            "body": content.body[0],
+            "tags": node.field_tags,
+            "comment": content.comment,
+            "moderation": content.content_moderation_control,
+            "comment_count": content.comment['#items'].comment_count,
+            "counter": total_viewed,
+            "version": content.field_version,
+            "helpful": content.field_helpful[0],
+            "sharethis": content.sharethis
+          }
+        }
+    %}
+  {% endblock %}
+</article>

@@ -1,0 +1,24 @@
+{% extends "page.html.twig" %}
+
+{% block page_title %}
+  <div class="search-block bg--blue text--center text--white">
+    <div class="container">
+      <div class="grid-center">
+        <div class="col-8_md-12">
+          {% if logged_in %}
+            <h1>
+              {{ 'Hi @name, how can we help you?'|t({ '@name': user.getDisplayName() }) }}
+            </h1>
+          {% else %}
+            <h1>{{ 'Hi, how can we help you?'|t }}</h1>
+          {% endif %}
+
+          <p class="search__description">
+            {{ 'If you have any question you can ask below or enter what you are looking for!'|t }}
+          </p>
+          {{ page.page_title }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,139 @@
+.fivestar {
+  select,
+  button {
+    @include invisible();
+  }
+}
+.article-list {
+  margin-bottom: $small-space;
+  margin-top: $small-space;
+
+  .sidebar & {
+    background: $green-light;
+    padding: 15px;
+  }
+
+  .fivestar {
+    // @include susy-media(desktop) {
+    //   position: absolute;
+    //   right: 0;
+    //   bottom: 10px;
+    // }
+
+    .sidebar & {
+      position: static;
+    }
+
+    .form-item {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    color: $gray-dark;
+
+    .sidebar & {
+      font-weight: normal;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__all {
+    text-align: right;
+    color: $gray-dark;
+    border-top: 1px solid $gray-light;
+    display: block;
+    padding-top: 15px;
+
+    span {
+      display: inline-block;
+      margin-right: 5px;
+      position: relative;
+      bottom: -1px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__info {
+    padding-top: 2px;
+    font-size: 12px;
+
+    a,
+    span {
+      display: inline-block;
+      margin-right: 0;
+      color: $gray-dark;
+      // background-color: $gray-light;
+      transition: all .3s;
+      padding: 3px 7px 2px 0;
+      margin-bottom: 2px;
+      border-radius: 2px;
+
+      &.like {
+        background-color: $green-dark;
+        color: $white;
+      }
+
+      &:before {
+        padding-right: 2px;
+      }
+    }
+
+    a {
+      &:hover {
+        text-decoration: none;
+        background-color: lighten($green, 40%);
+        color: $gray-dark;
+      }
+    }
+  }
+
+  ul {
+    @include reset-list;
+  }
+
+  h4 {
+    margin-bottom: 0;
+    font-weight: normal;
+
+    .sidebar & {
+      font-weight: normal;
+    }
+  }
+
+  li {
+    position: relative;
+    border-bottom: 1px solid $gray-light;
+    padding: 10px 0 5px;
+    padding-left: 25px;
+
+    > a {
+      display: block;
+      color: $gray-dark;
+      margin-bottom: 0;
+
+      > span {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &:last-child() {
+      border-bottom: none;
+    }
+  }
+
+  .tag-cloud {
+    li {
+      border: none;
+
+      > a {
+        display: inline;
+      }
+    }
+  }
+}

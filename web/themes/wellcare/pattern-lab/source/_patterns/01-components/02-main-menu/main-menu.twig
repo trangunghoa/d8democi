@@ -1,0 +1,10 @@
+<ul>
+  {% for item in items %}
+    <li>
+      {% if item.icon %}
+      <span class="{{ item.icon }}"></span>
+      {% endif %}
+      <a href="{{ item.link }}">{{ item.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

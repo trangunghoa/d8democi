@@ -1,0 +1,15 @@
+<div class="breadcrumb-block bg--grey small">
+  <div class="container">
+    <ul>
+      {% for item in items %}
+        <li>
+          {% if item.link %}
+            <a href="{{ item.link }}">{{ item.text }}</a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

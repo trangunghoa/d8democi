@@ -1,0 +1,463 @@
+// LAYOUT
+// This is the main layout file.
+// This file should be used to define the primary page layout that each of the page types will be extending.
+// This includes global styles for html, body, etc.
+
+@viewport{
+  zoom: 1;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1;
+}
+
+//Enable font-smoothing
+html {
+  @include helvetica;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $text-color;
+  font-size: $base-font-size; // Don't modify static unit.
+  font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: $base-line-height;
+}
+
+body {
+  // Disable in production mode;
+  // @include show-breakpoints;
+  text-size-adjust: none;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.section {
+  padding: $large-space 0;
+
+  // Reset spaces
+
+  > .section {
+    &:first-child() {
+      padding-top: 0;
+    }
+    &:last-child() {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.page-title {
+  padding: $large-space 0;
+}
+
+.sidebar {
+  .block-html {
+    background-color: $gray-light;
+    padding: 10px 15px;
+  }
+}
+
+.main {
+  > .section {
+    // Fixed space for knowledge-base page
+    &:first-of-type() {
+      padding-top: 0;
+    }
+  }
+}
+
+
+.entity-moderation-form__item {
+  .SumoSelect > .CaptionCont > label {
+    top: 10px;
+  }
+  .form-text {
+    height: 35px;
+  }
+
+  &:last-child {
+    button {
+      margin-bottom: 16px;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+}
+
+#block-wellcare-footer-support {
+  h3 {
+    color: #333;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+}
+
+.view-moderated-content,
+.view-admin-dashboard-revision {
+  .view-header {
+    text-align: right;
+    ul {
+      @include reset-list;
+      margin-bottom: 15px;
+
+      li {
+        display: inline-block;
+
+        a {
+          display: block;
+          background-color: $green-dark;
+          color: $white;
+
+          &:hover {
+            background-color: $gray-dark;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .button-action {
+    @include icon-pseudo;
+    position: relative;
+
+    &:before {
+      display: inline-block;
+      content: "\e9ad";
+    }
+
+    &[href="/node/add/article"],
+    &[href="/node/add/article?destination=/dashboard/artifacts"] {
+      &:before {
+        content: "\e905";
+      }
+    }
+
+    &[href="/node/add/audio"],
+    &[href="/node/add/audio?destination=/dashboard/artifacts"]{
+      &:before {
+        content: "\e90f";
+      }
+    }
+
+    &[href="/node/add/video"]
+    &[href="/node/add/audio?video=/dashboard/artifacts"] {
+      &:before {
+        content: "\e90e";
+      }
+    }
+  }
+}
+
+.action--link {
+  @include icon-pseudo;
+  font-size: 14px;
+  color: $white;
+  background: $green-dark;
+  display: block;
+  padding: 4px;
+
+  & + & {
+    margin-top: 3px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $gray-dark;
+  }
+
+  &:before {
+    font-size: 16px;
+    content: "\e96e";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    position: relative;
+    top: -2px;
+  }
+
+  &.history {
+    &:before {
+      content: "\e94f";
+    }
+  }
+
+  &.delete {
+    background: $danger;
+    &:before {
+      content: "\e9eb";
+    }
+  }
+}
+
+.more-link {
+  a {
+    @include icon-pseudo;
+
+    &:hover {
+      &:before {
+        text-decoration: none;
+      }
+    }
+    &:before {
+      content: "\e918";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 3px;
+      position: relative;
+      top: -2px;
+    }
+
+  }
+}
+
+.ajax-progress-throbber { display: none}
+.vote-form {
+  .form-select,
+  .button {
+    @include invisible;
+  }
+}
+
+.view-group-members {
+  .view-content {
+    @include clearfix;
+    .views-row {
+      width: 33%;
+      float: left;
+      padding: 7px;
+
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+  }
+}
+
+.view-filters {
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+
+  .form-type-select {
+    label {
+      margin-top: -13px;
+    }
+  }
+
+  .form-text {
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+  }
+
+  .form--inline .form-item {
+    margin-right: 20px;
+  }
+
+  .form--inline .form-actions {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0;
+
+    .button {
+      padding: 8px;
+      // margin-top: 20px;
+    }
+  }
+}
+
+.SumoSelect > .CaptionCont {
+  border: 1px solid #e3e3e3;
+}
+
+.container-inline .SumoSelect {
+  display: inline-block;
+}
+
+
+.js td .dropbutton-multiple {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  font-size: 14px;
+
+  td.is-active {
+    background: none;
+  }
+}
+
+label + .container-inline {
+  display: inline-block;
+}
+
+.simplelogin-form input.form-submit,
+.simplelogin-form button.form-submit {
+  background-color: $green-dark;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($green-dark, 15%);
+  }
+}
+
+
+.simplelogin .link:hover,
+.simplelogin .link:focus,
+.simplelogin a,
+.simplelogin-form .forgot-password a,
+.simplelogin a:hover,
+.simplelogin a:focus {
+  color: $green-dark;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($green-dark, 15%);
+  }
+}
+
+.simplelogin {
+  height: 100vh;
+  width: 100vw;
+
+  .messages {
+    margin-bottom: 15px;
+    border-width: 1px 1px 1px 5px;
+    box-shadow: none;
+
+    &--error {
+      border-color: #f9c9bf #f9c9bf #f9c9bf #e62600;
+    }
+  }
+
+  .form-actions {
+    text-align: center;
+
+    .button.form-submit {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  .form-item {
+      @include icon-pseudo;
+      position: relative;
+      padding-left: 36px;
+
+      &:before {
+        content: "\e902";
+        position: absolute;
+        display: inline-block;
+        background-color: $gray-light;
+        top: 0px;
+        bottom: 6px;
+        border: 1px solid #ccc;
+        border-right: 0;
+        left: 0;
+        width: 25px;
+        text-align: center;
+        color: $green-dark;
+        padding: 5px;
+      }
+
+      &.form-item-pass {
+
+        &:before {
+          content: "\e995";
+        }
+      }
+  }
+}
+
+.simplelogin-form {
+  background-color: rgba($white, .95);
+  max-width: 100%;
+
+  h1 {
+    display: none;
+  }
+
+  .forgot-password {
+    color: $gray-dark;
+  }
+
+  .simplelogin-logo {
+    padding: 0 20%;
+    margin-bottom: 20px;
+  }
+}
+
+body.simplelogin.opacity::before {
+  background-color: rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 600px) {
+  .simplelogin-form {
+    width: 90% !important;
+    padding: 20px;
+  }
+}
+
+
+// Reduce size of stars
+.br-theme-css-stars .br-readonly a {
+  height: 14px;
+  width: 14px;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.br-theme-css-stars .br-widget {
+  height: 18px;
+}
+
+// Customize for search page
+.path-search {
+  .views-element-container .view-header {
+    font-size: 11px;
+    text-align: right;
+    opacity: .7;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .content-header {
+    padding: 10px 0;
+
+    h2 {
+      font-size: 1.3rem;
+      margin: 0;
+
+      span {
+        position: relative;
+        display: inline-block;
+        color: $green-dark;
+        margin-right: 5px;
+        vertical-align: middle;
+        top: -2px;
+        opacity: 1;
+      }
+    }
+  }
+
+  .article-list__info {
+    transform: scale(0.9);
+    transform-origin: left;
+  }
+
+  .content__description {
+    margin-top: 0;
+    font-size: 13px;
+  }
+}

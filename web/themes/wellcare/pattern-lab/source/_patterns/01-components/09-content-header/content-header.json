@@ -1,0 +1,18 @@
+{
+  "image": "https://picsum.photos/900/500/?random",
+  "title": "The Bussiness Case for Loving Customers",
+  "date": "23 July 2014",
+  "author": {
+    "name": "Feb Dao",
+    "link": "#"
+  },
+  "category": {
+    "name": "Support",
+    "link": "#"
+  },
+  "commentCount": {
+    "amount": "242",
+    "link": "#"
+  },
+  "viewCount": "1000"
+}

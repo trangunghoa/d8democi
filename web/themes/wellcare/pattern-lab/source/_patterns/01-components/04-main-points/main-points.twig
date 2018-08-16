@@ -1,0 +1,21 @@
+<div class="section bg--grey">
+  <div class="container">
+    <div class="main-points grid-3_md-1-equalHeight">
+      {% for item in items %}
+        <div class="main-points__item col">
+          <a href="{{ item.link }}" class="main-points__inner bg--white">
+            <div class="grid-middle">
+              <div class="main-points__icon col-3 text--center">
+                <span class="{{ item.icon }}"></span>
+              </div>
+              <div class="main-points__content text--center col-9">
+                <h2 class="main-points__title">{{ item.title }}</h2>
+                <div class="main-points__text">{{ item.text }}</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

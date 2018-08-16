@@ -1,0 +1,35 @@
+.block {
+  &-html {
+    margin-top: $small-space;
+    margin-bottom: $small-space;
+  }
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__content {
+
+  }
+
+  &-list {
+    ul {
+      @include reset-list;
+
+      a {
+        display: block;
+        padding: 7px 0;
+        color: $gray-dark;
+        border-bottom: 1px solid rgba($gray, .5);
+      }
+
+      li {
+        &:last-child() {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<div class="chatbox__wrapper">
+  <a href="#" title="Chat with buddies" class="js-open-chat active chatbox-button icon-chat"></a>
+  <div class="chatbox">
+    <h2 class="chatbox__title">
+      Chatbox
+      <span class="chatbox__icon">
+        <a href="#" title="Close chat box" class="icon js-close-chat icon-x"></a>
+      </span>
+    </h2>
+    <div class="chatbox__search">
+      <input type="text" placeholder="Search..."/>
+      <button type="submit">Search</button>
+    </div>
+    <div class="chatbox__list">
+      <ul>
+        {% for user in users %}
+          <li>
+            <a href="{{ user.link }}" data-id="{{ loop.index }}" class="js-open-chatItem">
+              <span class="chatbox__avatar" style="background-image:url({{ user.avatar }})"></span>
+              <span class="small">
+                <h6>{{ user.name }}</h6>
+                {% if user.status == 'on' %}
+                  <span class="online">online</span>
+                {% else %}
+                  <span class="offline">offline {{ user.ideTime }}</span>
+                {% endif %}
+              </span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div id="chatbox-template" class="hidden">
+    <div class="chatbox__item">
+      <h2 class="chatbox__title">
+        <span class="chatbox__avatar item" style="background-image:url([avatar])"></span>
+        <a id="user-[id]"  target="_blank"  href="[link]">[name]</a>
+        <span class="chatbox__icon">
+          <a href="#" title="hide" class="icon icon-hide active js-hide-chatItem icon-chevron-down"></a>
+          <a href="#" title="hide" class="icon icon-show js-show-chatItem icon-chevron-up"></a>
+          <a href="#" title="Close" class="icon js-close-chatItem icon-x"></a>
+        </span>
+      </h2>
+      <div class="chatbox__inner">
+        <div class="chatbox__content">
+          [content]
+        </div>
+
+        <div class="chatbox__input">
+          <input type="text" placeholder="Enter text here..."/>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
